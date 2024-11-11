@@ -1,0 +1,12 @@
+%直方图均衡化，使用库函数
+%图像直方图的均衡化（histeq函数）变换源程序：
+I=imread('C:\Users\lenovo\Desktop\Lena.bmp');%读取图像
+J=histeq(I);%图像直方图均衡化
+subplot(2,2,1),imshow(I)%显示原始图像
+title('原图')
+subplot(2,2,2),imshow(J)%显示均衡化后图像
+title('均衡化后')
+subplot(2,2,3),imhist(I,64)%对原始图像进行直方统计
+title('直方图统计')
+subplot(2,2,4),imhist(J,64)%对直方图均衡化后直方图统计
+title('均衡化后直方图统计')
